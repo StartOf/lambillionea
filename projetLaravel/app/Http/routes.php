@@ -11,6 +11,21 @@
 |
 */
 
+
+
+
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('Template.layout');
 });
+
+Route::get('/revue', function () {
+    return view('Template.revue');
+});
+
+/* Revue/ */
+Route::get('/Revue', [
+	'as'=>'revue',
+	'uses'=>'RevueController@liste'
+]);
